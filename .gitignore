@@ -1,0 +1,35 @@
+
+.cache/
+coverage/
+dist/*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
