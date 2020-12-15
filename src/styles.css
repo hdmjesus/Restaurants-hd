@@ -18,3 +18,14 @@ form {
   background-color: #fff;
   border-radius: 16px;
 }
+
+.lupa::before {
+  content: '|';
+  position: absolute;
+  top: -2px;
+  color: #f2f2f2;
+  left: -5px;
+  text-align: center;
+  line-height: 20px;
+  height: 100%;
+}

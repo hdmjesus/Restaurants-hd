@@ -11,14 +11,15 @@ const config = {
     filename: 'bundle.js',
     chunkFilename: 'js/[id].[chunkhash].js',
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    hot: false,
-    open: true,
-    compress: true,
-    https: true,
-    port: 9000,
-  },
+  // devServer: {
+  //   // contentBase: path.resolve(__dirname, 'dist'),
+  //   hot: true,
+  //   open: true,
+  //   compress: true,
+  //   https: true,
+  //   port: 9000,
+  //   headers: { 'Access-Control-Allow-Origin': '*' },
+  // },
   module: {
     rules: [
       {
@@ -66,7 +67,6 @@ const config = {
     },
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './public/index.html'),
       filename: './index.html',

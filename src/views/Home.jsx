@@ -9,7 +9,7 @@ const Home = () => {
   const data = [
     {
       id: 1312,
-      name: 'shown',
+      name: 'Shown',
       location: {
         address: '7 Hanover StreetLawndale, CA 90260',
         city: 'Vatican City',
@@ -302,23 +302,19 @@ const Home = () => {
       },
     },
   ];
-
-  async function getData() {
-    const URLDAYS = `https://developers.zomato.com/api/v2.1/restaurant?user-key=48e76c5182b0f1f17564bbaba9395a79`;
-    let response = await fetch(URLDAYS);
-    let data = await response.json();
-    setData(data);
-  }
+  const [restaurantes, setrestaurantes] = useState(data);
 
   useEffect(() => {
-    console.log(data);
+    console.log(restaurantes);
   }, []);
   return (
     <>
       <Header />
       <Categories title='Populares'>
         <Restaurants>
-          <RestaurantItem />
+          {restaurantes.map((item) => (
+            <RestaurantItem key={item.id} {...item} />
+          ))}
         </Restaurants>
       </Categories>
       <Footer />

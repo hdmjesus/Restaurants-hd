@@ -8,10 +8,11 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/",
-    "build:dev": "webpack serve --config ./webpack.dev.config.js",
+    "build:dev": "webpack serve --config ./webpack.dev.config.js --mode development",
     "build:dll": "webpack --config ./webpack.dll.config.js --mode production",
     "build": "webpack --config ./webpack.config.js --mode production",
-    "build:all": "npm run build:dll ; npm run build"
+    "build:all": "npm run build:dll ; npm run build",
+    "start": "webpack serve --mode development"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
@@ -51,7 +52,7 @@
     "prettier": "^2.1.2",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
-    "webpack": "^5.10.0",
+    "webpack": "^5.10.2",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
