@@ -13,7 +13,7 @@ const config = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true,
+    hot: false,
     open: true,
     compress: true,
     https: true,

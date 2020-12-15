@@ -3,3 +3,18 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  background-color: #f6f9fc;
+}
+
+nav {
+  min-width: 200px;
+  width: 80%;
+}
+
+form {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 16px;
+}
