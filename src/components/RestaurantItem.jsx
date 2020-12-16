@@ -12,11 +12,14 @@ const RestaurantItem = (props) => {
     thumb,
     user_rating,
   } = props;
+  function culo() {
+    console.log('ola');
+  }
 
   return (
     <div className='font-body mb-10'>
-      <figure className='w-80'>
-        <img className='w-full rounded-md' src={thumb} alt={name} />
+      <figure className='w-80 h-56' onClick={culo}>
+        <img className='w-full rounded-md  h-56' src={thumb} alt={name} />
       </figure>
       <div className='description flex justify-between mt-3'>
         <div className='flex justify-center items-center'>
@@ -40,7 +43,16 @@ const RestaurantItem = (props) => {
           </span>
         </div>
       </div>
-      <h2 className='text-sm text-fontT font-title font-bold mt-2'>{name}</h2>
+      <div className='flex justify-between mr-5 '>
+        <h2 className='text-sm text-fontT font-title font-bold mt-2'>{name}</h2>
+        <div className='actions'>
+          <button
+            onClick={culo}
+            className='rounded bg-primary w-16 text-xs mt-2 text-white font-bold hover:bg-red-600'>
+            Ver Mas
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

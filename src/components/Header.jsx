@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../components/Search';
-const Header = () => {
+const Header = (props) => {
   return (
     <header className='flex flex-col p-4 justify-between'>
       <figure className='w-full '>
@@ -10,7 +10,7 @@ const Header = () => {
         </p>
       </figure>
       <nav className='min-w-1/4 mt-6 m-auto max-w-xs'>
-        <Search></Search>
+        <Search change={props}></Search>
       </nav>
     </header>
   );

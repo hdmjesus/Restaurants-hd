@@ -22,7 +22,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050147/restaurantes-hd/pexels-huy-phan-1383776_woe9yk.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '3.7',
+        aggregate_rating: 2.2,
         rating_text: 'Regular',
         rating_color: '5BA829',
         votes: '3902',
@@ -43,7 +43,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050147/restaurantes-hd/pexels-asad-photo-maldives-1449773_ohjtji.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '2.4',
+        aggregate_rating: 2.4,
         rating_text: 'Bad',
         rating_color: '5BA829',
         votes: '2188',
@@ -57,14 +57,14 @@ const Home = () => {
         city: 'Turkmenistan',
       },
       phone_numbers: '(212) 228-2930',
-      average_cost_for_two: '60',
+      average_cost_for_two: 60,
       price_range: '2',
       currency: '$',
       thumb:
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050146/restaurantes-hd/pexels-igor-starkov-1307698_pahclw.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '3.6',
+        aggregate_rating: 3.2,
         rating_text: 'Good',
         rating_color: '5BA829',
         votes: '2941',
@@ -85,7 +85,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050146/restaurantes-hd/pexels-pixabay-460537_dq6fzq.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '4.5',
+        aggregate_rating: 4.5,
         rating_text: 'Very Good',
         rating_color: '5BA829',
         votes: '2422',
@@ -106,7 +106,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050146/restaurantes-hd/pexels-lawrence-suzara-1581554_yow1io.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '3.0',
+        aggregate_rating: 1.2,
         rating_text: ' Good',
         rating_color: '5BA829',
         votes: '2375',
@@ -127,7 +127,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-marcus-herzberg-1058277_jzxg2v.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '2.8',
+        aggregate_rating: 2.8,
         rating_text: 'Regular',
         rating_color: '5BA829',
         votes: '2136',
@@ -148,7 +148,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-kaboompics-com-6267_fhkpds.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '4.9',
+        aggregate_rating: 4.9,
         rating_text: 'Very Good',
         rating_color: '5BA829',
         votes: '2593',
@@ -169,7 +169,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-pixabay-260922_zalqdp.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '4.3',
+        aggregate_rating: 4.3,
         rating_text: 'Very Good',
         rating_color: '5BA829',
         votes: '3176',
@@ -190,7 +190,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-vedanti-239975_tfn4bs.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '2.9',
+        aggregate_rating: 2.2,
         rating_text: 'Bad',
         rating_color: '5BA829',
         votes: '2842',
@@ -211,7 +211,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-naim-benjelloun-2290753_nox0sn.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '4.5',
+        aggregate_rating: 4.5,
         rating_text: 'Very Good',
         rating_color: '5BA829',
         votes: '3645',
@@ -232,7 +232,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050145/restaurantes-hd/pexels-chan-walrus-941861_qmlcjl.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '3.8',
+        aggregate_rating: 3.8,
         rating_text: ' Good',
         rating_color: '5BA829',
         votes: '3857',
@@ -253,7 +253,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050144/restaurantes-hd/pexels-pixabay-262047_tpkugq.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '3.',
+        aggregate_rating: 3.3,
         rating_text: ' Good',
         rating_color: '5BA829',
         votes: '2965',
@@ -274,7 +274,7 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050144/restaurantes-hd/pexels-tom-balabaud-1579739_1_vhk5wx.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '2.3',
+        aggregate_rating: 2.3,
         rating_text: 'Bad',
         rating_color: '5BA829',
         votes: '3731',
@@ -295,31 +295,89 @@ const Home = () => {
         'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050144/restaurantes-hd/pexels-negative-space-34650_qr20so.webp',
       featured_image: '',
       user_rating: {
-        aggregate_rating: '4.8',
+        aggregate_rating: 4.8,
         rating_text: 'Very Good',
         rating_color: '5BA829',
         votes: '3668',
       },
     },
   ];
+  const [rating, setRating] = useState();
   const [restaurantes, setrestaurantes] = useState(data);
+  const [restaurantsFilter, setrestaurantsFilter] = useState([]);
+  const [listaRating, setListaRating] = useState([]);
+  const [valueFilter, setvalueFilter] = useState('');
+
+  function getInputs() {
+    const value = document.getElementById('filter').value;
+    setvalueFilter(value);
+  }
+
+  function filterRestaurants() {
+    const valor = data.filter(
+      (item) =>
+        item.name.toLowerCase().includes(valueFilter.toLowerCase()) ||
+        item.location.city.toLowerCase().includes(valueFilter.toLowerCase())
+    );
+    setListaRating([]);
+    setrestaurantsFilter(valor);
+    console.log(restaurantsFilter);
+  }
+
+  function filterRating() {
+    const select = document.getElementById('select').value;
+    console.log(select);
+    setRating(select);
+
+    const corazones = data.filter((item) =>
+      item.user_rating.aggregate_rating.toFixed().includes(rating)
+    );
+    setListaRating(corazones);
+    setrestaurantsFilter([]);
+    return corazones;
+  }
+
+  function updateListRating() {
+    setrestaurantsFilter([]);
+    setListaRating(filterRating());
+    console.log(listaRating);
+  }
 
   useEffect(() => {
-    console.log(restaurantes);
+    const select = document.getElementById('select').value;
+    setRating(select);
+    console.log(select);
   }, []);
+
   return (
     <>
-      <Header />
+      <Header
+        change={getInputs}
+        filter={filterRestaurants}
+        filterR={filterRating}
+        update={updateListRating}
+      />
       <Categories title='Populares'>
         <Restaurants>
-          {restaurantes.map((item) => (
-            <RestaurantItem key={item.id} {...item} />
-          ))}
+          {restaurantsFilter.length > 0 &&
+            restaurantsFilter.map((item) => (
+              <RestaurantItem key={item.id} {...item} />
+            ))}
+
+          {listaRating.length > 0 &&
+            listaRating.map((item) => (
+              <RestaurantItem key={item.id} {...item} />
+            ))}
+          {restaurantsFilter.length == 0 &&
+            listaRating.length == 0 &&
+            restaurantes.map((item) => (
+              <RestaurantItem key={item.id} {...item} />
+            ))}
         </Restaurants>
       </Categories>
       <Footer />
     </>
   );
 };
-
+// restaurantsFilter.map((item) => <RestaurantItem key={item.id} {...item} />);
 export default Home;
