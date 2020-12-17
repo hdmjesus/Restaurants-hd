@@ -29,3 +29,17 @@ form {
   line-height: 20px;
   height: 100%;
 }
+
+.nav {
+  margin-top: 90px;
+  margin-bottom: 15px;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}

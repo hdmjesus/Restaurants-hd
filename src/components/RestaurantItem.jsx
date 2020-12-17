@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import Votes from '../components/Votes';
 const RestaurantItem = (props) => {
   const {
     verage_cost_for_two,
@@ -18,19 +19,17 @@ const RestaurantItem = (props) => {
 
   return (
     <div className='font-body mb-10'>
-      <figure className='w-80 h-56' onClick={culo}>
-        <img className='w-full rounded-md  h-56' src={thumb} alt={name} />
-      </figure>
+      <Link to={`/restaurant/${id}`}>
+        {' '}
+        <figure className='w-80 h-56' onClick={culo}>
+          <img className='w-full rounded-md  h-56' src={thumb} alt={name} />
+        </figure>
+      </Link>
+
       <div className='description flex justify-between mt-3'>
         <div className='flex justify-center items-center'>
-          <div className='flex justify-center items-center text-xs font-bold font-title border py-1 px-2 mr-10 rounded-full border-fontB'>
-            <span className='material-icons text-base'>mood</span>
-            <span className='material-icons text-base fa-align-center mr-2'>
-              mood_bad
-            </span>
-            <span className='text-xs text-fontB'>{user_rating.votes}</span>
-          </div>
-          <div>
+          <Votes votes={user_rating.votes} />
+          <div className='ml-3'>
             <span className='text-xs text-fontB'>{location.city}</span>
           </div>
         </div>
@@ -49,7 +48,7 @@ const RestaurantItem = (props) => {
           <button
             onClick={culo}
             className='rounded bg-primary w-16 text-xs mt-2 text-white font-bold hover:bg-red-600'>
-            Ver Mas
+            <Link to={`/restaurant/${id}`}>Ver Mas</Link>
           </button>
         </div>
       </div>

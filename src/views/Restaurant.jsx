@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Categories from '../components/Categories';
-import Restaurants from '../components/Restaurants';
-import RestaurantItem from '../components/RestaurantItem';
+import Footer from '../components/Footer';
+import RestaurantDetails from '../components/RestaurantDetails';
+import AdditionalFeatures from '../components/AdditionalFeatures';
+import Facilities from '../components/Facilities';
+import Timetable from '../components/Timetable';
+import Thumb from '../components/Thumb';
+import StartRating from '../components/StartRating';
 
-const Home = () => {
+const Restaurant = (props) => {
+  const id = props.match.params.id;
   const data = [
     {
       id: 1312,
@@ -302,79 +306,56 @@ const Home = () => {
       },
     },
   ];
-  const [rating, setRating] = useState();
   const [restaurantes, setrestaurantes] = useState(data);
-  const [restaurantsFilter, setrestaurantsFilter] = useState([]);
-  const [listaRating, setListaRating] = useState([]);
-  const [valueFilter, setvalueFilter] = useState('');
+  const [name, setName] = useState();
+  const [phoneNumber, setPhone] = useState();
+  const [city, setCity] = useState();
+  const [votes, setVotes] = useState();
+  const [votesText, setVotesText] = useState();
+  const [address, setAddress] = useState();
+  const [thumb, setThumb] = useState();
+  const [dataFilter, setDataFilter] = useState([]);
 
-  function getInputs() {
-    const value = document.getElementById('filter').value;
-    setvalueFilter(value);
-  }
-
-  function filterRestaurants() {
-    const valor = data.filter(
-      (item) =>
-        item.name.toLowerCase().includes(valueFilter.toLowerCase()) ||
-        item.location.city.toLowerCase().includes(valueFilter.toLowerCase())
-    );
-    setListaRating([]);
-    setrestaurantsFilter(valor);
-  }
-
-  function filterRating() {
-    const select = document.getElementById('select').value;
-
-    setRating(select);
-
-    const corazones = data.filter((item) =>
-      item.user_rating.aggregate_rating.toFixed().includes(rating)
-    );
-    setListaRating(corazones);
-    setrestaurantsFilter([]);
-    return corazones;
-  }
-
-  function updateListRating() {
-    setrestaurantsFilter([]);
-    setListaRating(filterRating());
+  function filterId() {
+    const result = data.filter((item) => item.id == id);
+    const dataThumb = result.map((item) => item.thumb);
+    const location = result.map((item) => item.location);
+    const user = result.map((item) => item.user_rating);
+    const name = result.map((item) => item.name);
+    const phone = result.map((item) => item.phone_numbers);
+    setThumb(dataThumb[0]);
+    setName(name[0]);
+    setPhone(phone[0]);
+    setDataFilter(result);
+    setCity(location[0].city);
+    setAddress(location[0].address);
+    setVotes(user[0].votes);
+    setVotesText(user[0].rating_text);
   }
 
   useEffect(() => {
-    const select = document.getElementById('select').value;
-    setRating(select);
+    filterId();
   }, []);
-
   return (
     <>
-      <Header
-        change={getInputs}
-        filter={filterRestaurants}
-        filterR={filterRating}
-        update={updateListRating}
+      <Header isDetail />
+      <Thumb img={thumb} />
+      <RestaurantDetails
+        name={name}
+        phoneNumber={phoneNumber}
+        votes={votes}
+        votesText={votesText}
+        city={city}
+        address={address}
       />
-      <Categories title='Populares'>
-        <Restaurants>
-          {restaurantsFilter.length > 0 &&
-            restaurantsFilter.map((item) => (
-              <RestaurantItem key={item.id} {...item} />
-            ))}
-
-          {listaRating.length > 0 &&
-            listaRating.map((item) => (
-              <RestaurantItem key={item.id} {...item} />
-            ))}
-          {restaurantsFilter.length == 0 &&
-            listaRating.length == 0 &&
-            restaurantes.map((item) => (
-              <RestaurantItem key={item.id} {...item} />
-            ))}
-        </Restaurants>
-      </Categories>
+      <AdditionalFeatures>
+        <Facilities />
+        <Timetable />
+      </AdditionalFeatures>
+      <StartRating />
       <Footer />
     </>
   );
 };
-// restaurantsFilter.map((item) => <RestaurantItem key={item.id} {...item} />);
-export default Home;
+
+export default Restaurant;
