@@ -3,8 +3,8 @@ import React from 'react';
 const Timetable = (props) => {
   return (
     <>
-      <hr className='w-3/4 m-auto mt-6 bg-fontT' />
-      <section>
+      <hr className='w-3/4 m-auto mt-6 bg-fontT md:hidden' />
+      <section className='md:w-1/2 horarios'>
         <h3 className="text-fontT mb-3 mt-8 font-bold font-Montserrat'">
           Horario
         </h3>

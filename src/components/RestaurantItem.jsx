@@ -15,10 +15,10 @@ const RestaurantItem = (props) => {
   } = props;
 
   return (
-    <div className='font-body mb-10'>
+    <div className='restaurant font-body mb-10 w-80 m-auto'>
       <Link to={`/restaurant/${id}`}>
         {' '}
-        <figure className='w-80 h-56'>
+        <figure className='restaurant__figure h-56 '>
           <img className='w-full rounded-md  h-56' src={thumb} alt={name} />
         </figure>
       </Link>
@@ -27,7 +27,9 @@ const RestaurantItem = (props) => {
         <div className='flex justify-center items-center'>
           <Votes votes={user_rating.votes} />
           <div className='ml-3'>
-            <span className='text-xs text-fontB'>{location.city}</span>
+            <span className='text-xs text-fontB md:text-sm'>
+              {location.city}
+            </span>
           </div>
         </div>
         <div className='flex justify-center items-center mr-4'>
@@ -42,9 +44,7 @@ const RestaurantItem = (props) => {
       <div className='flex justify-between mr-5 '>
         <h2 className='text-sm text-fontT font-title font-bold mt-2'>{name}</h2>
         <div className='actions'>
-          <button
-            onClick={culo}
-            className='rounded bg-primary w-16 text-xs mt-2 text-white font-bold hover:bg-red-600'>
+          <button className='rounded bg-primary w-16 text-xs md:text-sm mt-2 md:py-1 md:px-2 md:w-20 text-white font-bold hover:bg-red-600'>
             <Link to={`/restaurant/${id}`}>Ver Mas</Link>
           </button>
         </div>

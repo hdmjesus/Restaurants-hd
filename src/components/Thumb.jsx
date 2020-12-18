@@ -2,8 +2,12 @@ import React from 'react';
 
 const Thumb = (props) => {
   return (
-    <figure className='mt-16'>
-      <img src={props.img} alt='Imagen del Restaurante' />
+    <figure className='thumb mt-16 '>
+      <img
+        className=' lg:mt-3 lg:ml-8 '
+        src={props.img}
+        alt='Imagen del Restaurante'
+      />
     </figure>
   );
 };

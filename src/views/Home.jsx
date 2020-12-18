@@ -259,48 +259,6 @@ const Home = () => {
         votes: '2965',
       },
     },
-    {
-      id: 1248,
-      name: 'Amount',
-      location: {
-        address: '9993 53rd DriveMechanicsburg, PA 17050',
-        city: 'Costa Rica',
-      },
-      phone_numbers: '(212) 228-2930',
-      average_cost_for_two: '60',
-      price_range: '2',
-      currency: '$',
-      thumb:
-        'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050144/restaurantes-hd/pexels-tom-balabaud-1579739_1_vhk5wx.webp',
-      featured_image: '',
-      user_rating: {
-        aggregate_rating: 2.3,
-        rating_text: 'Bad',
-        rating_color: '5BA829',
-        votes: '3731',
-      },
-    },
-    {
-      id: 1562,
-      name: 'Every',
-      location: {
-        address: '914 Southampton DriveWinona, MN 55987',
-        city: 'Lithuania',
-      },
-      phone_numbers: '(212) 228-2930',
-      average_cost_for_two: '60',
-      price_range: '2',
-      currency: '$',
-      thumb:
-        'https://res.cloudinary.com/dzp98wbza/image/upload/v1608050144/restaurantes-hd/pexels-negative-space-34650_qr20so.webp',
-      featured_image: '',
-      user_rating: {
-        aggregate_rating: 4.8,
-        rating_text: 'Very Good',
-        rating_color: '5BA829',
-        votes: '3668',
-      },
-    },
   ];
   const [rating, setRating] = useState();
   const [restaurantes, setrestaurantes] = useState(data);

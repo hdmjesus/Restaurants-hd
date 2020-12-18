@@ -73,3 +73,38 @@ input[type='radio'] {
   z-index: 999;
   transition: top 0.35s ease;
 }
+.restaurant {
+  min-width: 250px;
+  max-width: 395px;
+}
+.thumb {
+  min-width: 250px;
+  max-width: 500px;
+}
+@media (min-width: 640px) {
+  .thumb {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .thumb img {
+    border-radius: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .facilidades > div {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .facilidades-title {
+    text-align: center;
+  }
+  .horarios {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .categories {
+    padding-top: 80px;
+  }
+}

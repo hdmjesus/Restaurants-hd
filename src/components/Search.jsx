@@ -18,7 +18,7 @@ const Search = (props) => {
       <div className='barra'></div>
       <div className='flex w-full '>
         <select
-          className='bg-transparent w-16 text-xs '
+          className='bg-transparent w-16 text-xs md:text-sm'
           name='select '
           id='select'
           onChange={ratingInput}>
@@ -32,7 +32,7 @@ const Search = (props) => {
           <option value='5'>♡♡♡♡♡</option>
         </select>
         <input
-          className='bg-transparent w-full pr-5 pl-5 text-fontT outline-none text-xs'
+          className='bg-transparent w-full pr-5 pl-5 text-fontT outline-none text-xs md:text-base'
           name='restaurant'
           id='filter'
           placeholder='Name, City'

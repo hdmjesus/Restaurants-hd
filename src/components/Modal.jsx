@@ -17,7 +17,7 @@ const Modal = (props) => {
             <h2>Tu opinion es importante</h2>
             <StartRating />
             <button
-              className='py-2 px-3 bg-primary text-white rounded mt-4'
+              className='py-2 px-3 bg-primary text-white rounded mt-4 hover:bg-red-600'
               onClick={() => setRatingSend(true)}>
               Enviar
             </button>
@@ -30,7 +30,7 @@ const Modal = (props) => {
             </div>
             <p>Gracias</p>
             <button
-              className='py-2 px-3 bg-primary text-white rounded mt-4'
+              className='py-2 px-3 bg-primary text-white rounded mt-4 hover:bg-red-600'
               onClick={() => props.closeModal()}>
               Cerrar
             </button>

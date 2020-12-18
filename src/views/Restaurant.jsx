@@ -339,6 +339,7 @@ const Restaurant = (props) => {
   return (
     <>
       <Header isDetail />
+
       <Thumb img={thumb} />
       <RestaurantDetails
         name={name}
@@ -348,6 +349,7 @@ const Restaurant = (props) => {
         city={city}
         address={address}
       />
+
       <AdditionalFeatures>
         <Facilities />
         <Timetable />
