@@ -79,10 +79,10 @@ const config = {
       filename: 'css/[name].[contenthash].css',
       chunkFilename: 'css/[id].[chunkhash].css',
     }),
-    new webpack.DllReferencePlugin({
-      manifest: require('./modules-manifest.json'),
-      // context: path.resolve(__dirname, '.src/'),
-    }),
+    // new webpack.DllReferencePlugin({
+    //   manifest: require('./modules-manifest.json'),
+    //   // context: path.resolve(__dirname, '.src/'),
+    // }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*'],
     }),

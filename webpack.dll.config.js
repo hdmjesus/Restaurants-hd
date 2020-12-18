@@ -5,7 +5,13 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    modules: ['react', 'react-dom', 'react-router', 'react-hot-loader'],
+    modules: [
+      'react',
+      'react-dom',
+      'react-router',
+      'react-hot-loader',
+      'react-router-dom',
+    ],
   },
 
   output: {
