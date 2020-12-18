@@ -352,7 +352,7 @@ const Restaurant = (props) => {
         <Facilities />
         <Timetable />
       </AdditionalFeatures>
-      <StartRating />
+
       <Footer />
     </>
   );

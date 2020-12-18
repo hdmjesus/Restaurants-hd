@@ -1,8 +1,11 @@
-import { address } from 'faker';
 import React, { useEffect, useState } from 'react';
 import Votes from '../components/Votes';
+import Modal from '../components/Modal';
 const RestaurantDetails = (props) => {
-  useEffect(() => {}, []);
+  const [modalActive, setModalActive] = useState(false);
+  function closeModal() {
+    setModalActive(false);
+  }
   return (
     <section className='w-10/12 m-auto flex justify-between'>
       <article className='description '>
@@ -37,10 +40,13 @@ const RestaurantDetails = (props) => {
 
           <Votes votes={props.votes} />
         </div>
-        <button className='font-Mulish mt-3 bg-primary rounded text-white text-sm py-1 px-2'>
+        <button
+          className='font-Mulish mt-3 bg-primary rounded text-white text-sm py-1 px-2'
+          onClick={() => setModalActive(true)}>
           Calificanos
         </button>
       </article>
+      {modalActive && <Modal closeModal={closeModal}></Modal>}
     </section>
   );
 };

@@ -13,15 +13,12 @@ const RestaurantItem = (props) => {
     thumb,
     user_rating,
   } = props;
-  function culo() {
-    console.log('ola');
-  }
 
   return (
     <div className='font-body mb-10'>
       <Link to={`/restaurant/${id}`}>
         {' '}
-        <figure className='w-80 h-56' onClick={culo}>
+        <figure className='w-80 h-56'>
           <img className='w-full rounded-md  h-56' src={thumb} alt={name} />
         </figure>
       </Link>
